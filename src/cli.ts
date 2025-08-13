@@ -20,7 +20,7 @@ if (fs.existsSync(targetDir)) {
 }
 
 // dist compile হওয়ার পরে template এর সঠিক path
-const templateDir = path.resolve(__dirname, '../template') // <- important
+const templateDir = path.join(__dirname, 'template')
 if (!fs.existsSync(templateDir)) {
   console.error('Template folder not found:', templateDir)
   process.exit(1)
