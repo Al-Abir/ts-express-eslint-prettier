@@ -1,6 +1,6 @@
 {
   "name": "ts-express-eslint-prettier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A TypeScript + Express backend starter with ESLint and Prettier configuration.",
   "main": "index.js",
   "files": [
@@ -23,7 +23,9 @@
     "type": "git",
     "url": "git+https://github.com/Al-Abir/ts-express-eslint-prettier.git"
   },
-  "keywords": ["npm"],
+  "keywords": [
+    "npm"
+  ],
   "author": "Abir Sheikh",
   "license": "MIT",
   "bugs": {
