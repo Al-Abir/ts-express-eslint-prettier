@@ -1,0 +1,51 @@
+{
+  "name": "ts-express-eslint-prettier",
+  "version": "1.0.0",
+  "description": "A TypeScript + Express backend starter with ESLint and Prettier configuration.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "lint": "eslint src  --ext .js,.ts,.mjs,.cjs",
+    "lint:fix": "eslint src --ext .js,.ts,.mjs,.cjs --fix",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "prettier:fix": "npx prettier --write src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Al-Abir/ts-express-eslint-prettier.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Abir Sheikh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Al-Abir/ts-express-eslint-prettier/issues"
+  },
+  "homepage": "https://github.com/Al-Abir/ts-express-eslint-prettier#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cros": "^1.1.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.2.1",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.3.0",
+    "jiti": "^2.5.1",
+    "prettier": "^3.6.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.1"
+  }
+}
