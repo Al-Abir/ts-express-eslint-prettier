@@ -1,20 +1,29 @@
 {
   "name": "ts-express-eslint-prettier",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "description": "A TypeScript + Express backend starter with ESLint and Prettier configuration.",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "bin": {
+    "ts-express-eslint-prettier": "./dist/cli.js"
+  },
   "files": [
-    "dist"
+    "dist",
+    "template",
+    "src",
+    "LICENSE",
+    "README.md",
+    "eslint.config.mts",
+    ".prettierrc.json"
   ],
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/index.js",
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
-    "lint": "eslint src  --ext .js,.ts,.mjs,.cjs",
+    "lint": "eslint src --ext .js,.ts,.mjs,.cjs",
     "lint:fix": "eslint src --ext .js,.ts,.mjs,.cjs --fix",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
-    "prettier:fix": "npx prettier --write src"
+    "prettier:fix": "npx prettier --write src",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,10 +31,11 @@
   },
   "keywords": [
     "npm",
-    "express",
     "typescript",
+    "express",
     "eslint",
-    "prettier"
+    "prettier",
+    "backend-starter"
   ],
   "author": "Abir Sheikh",
   "license": "MIT",
@@ -35,6 +45,7 @@
   "homepage": "https://github.com/Al-Abir/ts-express-eslint-prettier#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "cros": "^1.1.0",
     "dotenv": "^17.2.1",
     "express": "^5.1.0"
   },
