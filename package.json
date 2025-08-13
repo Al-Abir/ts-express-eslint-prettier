@@ -2,13 +2,10 @@
   "name": "ts-express-eslint-prettier",
   "version": "1.0.1",
   "description": "A TypeScript + Express backend starter with ESLint and Prettier configuration.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "src",
-    "dist",
-    "index.js",
-    "eslint.config.mts",
-    ".prettierrc.json"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",
@@ -24,7 +21,11 @@
     "url": "git+https://github.com/Al-Abir/ts-express-eslint-prettier.git"
   },
   "keywords": [
-    "npm"
+    "npm",
+    "express",
+    "typescript",
+    "eslint",
+    "prettier"
   ],
   "author": "Abir Sheikh",
   "license": "MIT",
@@ -34,7 +35,6 @@
   "homepage": "https://github.com/Al-Abir/ts-express-eslint-prettier#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "cros": "^1.1.0",
     "dotenv": "^17.2.1",
     "express": "^5.1.0"
   },
