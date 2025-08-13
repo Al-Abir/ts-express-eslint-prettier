@@ -1,8 +1,10 @@
 #!/usr/bin/env node
-import fs from 'fs'
+// src/cli.ts
 import path from 'path'
+import fs from 'fs'
 import { execSync } from 'child_process'
 
+// CLI থেকে project name
 const projectName = process.argv[2]
 if (!projectName) {
   console.error(
@@ -17,11 +19,18 @@ if (fs.existsSync(targetDir)) {
   process.exit(1)
 }
 
-// Copy template folder
-const templateDir = path.join(__dirname, 'template')
-fs.cpSync(templateDir, targetDir, { recursive: true })
+// dist compile হওয়ার পরে template এর সঠিক path
+const templateDir = path.resolve(__dirname, '../template') // <- important
+if (!fs.existsSync(templateDir)) {
+  console.error('Template folder not found:', templateDir)
+  process.exit(1)
+}
 
+// Copy template
+fs.cpSync(templateDir, targetDir, { recursive: true })
 console.log(`Project created at ${targetDir}`)
+
+// Install dependencies
 console.log('Installing dependencies...')
 execSync('npm install', { cwd: targetDir, stdio: 'inherit' })
 
